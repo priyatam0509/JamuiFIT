@@ -51,6 +51,10 @@
         <div class="field"><label for="mode">Training mode</label><select id="mode"><option>In-person (Jamui)</option><option>Online</option><option>Not sure yet</option></select></div>
         <div class="field"><label for="food">Food preference</label><select id="food"><option>Vegetarian</option><option>Eggetarian</option><option>Non-vegetarian</option></select></div>
       </div>
+      <div class="form-row">
+        <div class="field"><label for="trainer">Trainer preference</label><select id="trainer"><option>No preference</option><option>Female trainer</option><option>Male trainer</option></select></div>
+        <div class="field"><label for="lang">Preferred language</label><select id="lang"><option>Hindi</option><option>English</option></select></div>
+      </div>
       <div class="field"><label for="routine">Your daily routine</label><textarea id="routine" placeholder="e.g. Wake 6 AM, office 10–6, free in the evening, sleep 11 PM"></textarea></div>
       <div class="field"><label for="notes">Anything else? (injuries, health issues, special diet request)</label><textarea id="notes" style="min-height:80px" placeholder="Optional"></textarea></div>
       <button class="btn btn-primary" type="submit">Prepare my WhatsApp message →</button>
@@ -72,6 +76,8 @@
           <li><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg></span><div><b>Instagram</b><a data-insta>Follow for tips &amp; transformations</a></div></li>
           <li><span class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Location</b><span data-site="address"></span></div></li>
           <li><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Hours</b><span data-site="hours"></span></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><div><b>Languages</b><span data-site="languages"></span></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></span><div><b>For women</b><span data-site="femaleTrainer"></span></div></li>
         </ul>
       </div>
     </div>
@@ -90,6 +96,8 @@
       <details><summary>Will I have to stop eating rice and roti?</summary><p>No. Your diet is built from the food you already eat — we adjust portions and combinations rather than banning foods.</p></details>
       <details><summary>How soon will I see results?</summary><p>Most people notice better energy in 2–3 weeks and visible changes in 6–8 weeks with consistency. Safe fat loss is usually around 0.5–1 kg per week.</p></details>
       <details><summary>Do you train people outside Jamui?</summary><p>Yes — through online coaching with video-call assessments, workout videos and daily WhatsApp check-ins.</p></details>
+      <details><summary>Is there a female trainer for women?</summary><p>Yes. Female clients are trained by a female trainer — in person and online. Just choose "Female trainer" in the form or mention it on WhatsApp.</p></details>
+      <details><summary>Which languages do you coach in?</summary><p>Hindi and English. Sessions, diet charts and WhatsApp support are in whichever you are more comfortable with.</p></details>
       <details><summary>I have a health condition. Can you still help?</summary><p>Often yes, but please share it in the form. For conditions like diabetes, BP, heart issues or pregnancy, I'll ask you to check with your doctor and plan around their advice.</p></details>
     </div>
   </div>
@@ -98,6 +106,11 @@
 <script src="assets/site.js"></script>
 <script>
 const form=document.getElementById("lead"), err=document.getElementById("err"), done=document.getElementById("done");
+// Female clients get a female trainer by default (they can still change it)
+const genderSel=document.getElementById("gender"), trainerSel=document.getElementById("trainer");
+genderSel.addEventListener("change",()=>{
+  if(genderSel.value==="Female" && trainerSel.value==="No preference") trainerSel.value="Female trainer";
+});
 form.addEventListener("submit",e=>{
   e.preventDefault();
   const v=id=>document.getElementById(id).value.trim();
@@ -115,6 +128,8 @@ form.addEventListener("submit",e=>{
     "Goal: "+goal,
     "Mode: "+v("mode"),
     "Food: "+v("food"),
+    "Trainer: "+v("trainer"),
+    "Language: "+v("lang"),
     v("routine")&&"Routine: "+v("routine"),
     v("notes")&&"Notes: "+v("notes")
   ].filter(Boolean);

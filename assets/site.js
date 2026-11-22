@@ -4,9 +4,11 @@
 const SITE = {
   brand: "JAMUI FIT",            // short brand name shown in the logo
   trainerName: "Your Name",       // e.g. "Rahul Kumar"
-  phone: "919999999999",          // WhatsApp number WITH country code, digits only
-  phoneDisplay: "+91 99999 99999",
-  email: "yourname@gmail.com",
+  phone: "918862821060",          // WhatsApp number WITH country code, digits only
+  phoneDisplay: "+91 88628 21060",
+  email: "kraazft@gmail.com",
+  languages: "Hindi & English",
+  femaleTrainer: "Female trainer for female clients",
   instagram: "https://instagram.com/yourhandle",
   address: "Jamui, Bihar – 811307",
   hours: "Mon–Sat · 5:30 AM – 9:00 PM"
@@ -76,6 +78,8 @@ function buildFooter(){
             <li><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a></li>
             <li>${SITE.address}</li>
             <li>${SITE.hours}</li>
+            <li>Languages: ${SITE.languages}</li>
+            <li>${SITE.femaleTrainer}</li>
           </ul>
         </div>
       </div>
