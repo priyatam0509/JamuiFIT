@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diet Plans — Jamui Fit</title>
+<meta name="description" content="Diet plans made around your daily routine and food preferences using local Bihar foods. Veg, egg and non-veg options. BMI calculator.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Diet plans</span>
+    <h1>A diet that fits your day</h1>
+    <p>Your diet should follow your routine — not the other way round. I plan meal timings around when you wake, work and sleep, using food that's easy to get in Jamui.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow dark">How I build your plan</span>
+      <h2>Four things I ask first</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal"><span class="tag">01</span><h3 style="font-size:22px">Your routine</h3><p>Wake-up, work hours, workout time, sleep. Meals are placed where they fit.</p></div>
+      <div class="card reveal"><span class="tag">02</span><h3 style="font-size:22px">Your food</h3><p>Veg, egg or non-veg. What's cooked at home. What you can't give up.</p></div>
+      <div class="card reveal"><span class="tag">03</span><h3 style="font-size:22px">Your goal</h3><p>Fat loss, weight gain, muscle, or just eating healthier and feeling active.</p></div>
+      <div class="card reveal"><span class="tag">04</span><h3 style="font-size:22px">Your health</h3><p>Sugar, BP, thyroid or other conditions — planned with your doctor's advice in mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow dark">Sample day</span>
+      <h2>Same goal, different routine</h2>
+      <p>A sample vegetarian fat-loss day, shown for three routines. Your plan will have your own portions and foods.</p>
+    </div>
+    <div class="plan-tabs reveal" role="tablist">
+      <button class="on" data-plan="early">Early riser / shop owner</button>
+      <button data-plan="office">Office 9–6</button>
+      <button data-plan="night">Night shift</button>
+    </div>
+    <div class="meal-plan reveal" id="plan"></div>
+    <p class="note">Sample only — not a prescription. Portions depend on your weight, activity and goal. If you have a medical condition, check with your doctor.</p>
+  </div>
+</section>
+
+<section class="dark-sec">
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">Quick check</span>
+      <h2 style="font-size:clamp(34px,4.5vw,52px);text-transform:uppercase;margin:12px 0 14px">BMI Calculator</h2>
+      <p style="color:#bdb5aa;margin-bottom:14px">BMI is a rough first check of weight for height. For South Asians, health risk starts at lower BMI, so Indian guidelines use 23 as the start of "overweight".</p>
+      <p style="color:#bdb5aa">It doesn't measure muscle vs fat — that's why I also check waist and body measurements in your assessment.</p>
+    </div>
+    <form class="calc reveal" id="bmi">
+      <div class="form-row">
+        <div class="field"><label for="h">Height (cm)</label><input id="h" type="number" min="100" max="230" placeholder="e.g. 168" required></div>
+        <div class="field"><label for="w">Weight (kg)</label><input id="w" type="number" min="25" max="250" step="0.1" placeholder="e.g. 72" required></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Calculate</button>
+      <div class="calc-out" id="bmiOut"></div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow dark">On your request</span>
+      <h2>Custom diet plans</h2>
+      <p>Have a specific need? Tell me and I'll build the plan around it.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><h3 style="font-size:22px">Pure veg / Jain</h3><p>Protein from dal, chana, paneer, soya, curd, sattu and milk.</p></div>
+      <div class="card reveal"><h3 style="font-size:22px">Budget friendly</h3><p>Low-cost plans using seasonal sabzi, chana, eggs and sattu.</p></div>
+      <div class="card reveal"><h3 style="font-size:22px">Hostel / no kitchen</h3><p>Simple no-cook and mess-food options for students and bachelors.</p></div>
+      <div class="card reveal"><h3 style="font-size:22px">Weight gain</h3><p>Calorie-dense home foods — banana shakes, peanuts, ghee, paneer.</p></div>
+      <div class="card reveal"><h3 style="font-size:22px">Fasting &amp; festivals</h3><p>Plans for vrat, Chhath, Ramzan and wedding season, so you stay on track.</p></div>
+      <div class="card reveal"><h3 style="font-size:22px">Women's health</h3><p>Iron, calcium and protein focus; plans adjusted around life stages.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div><h2>Get your personal diet chart</h2><p class="hi">अपनी दिनचर्या बताइए — डाइट चार्ट मैं बनाऊँगा।</p></div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="contact.html">Request a Diet Plan →</a>
+      <a class="btn btn-wa" data-wa="Hi! I want a custom diet plan. My routine is: ">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+<script>
+const PLANS = {
+  early:[["5:30 AM","Wake up","Warm water + 5 soaked almonds"],["6:00 AM","Workout","Training session / brisk walk"],["7:30 AM","Breakfast","Sattu drink (no sugar) + 2 besan chilla with chutney"],["11:00 AM","Mid-morning","1 seasonal fruit (guava / papaya / apple)"],["1:30 PM","Lunch","2 roti + dal + sabzi + salad + curd"],["5:00 PM","Snack","Roasted chana or makhana + green tea"],["8:00 PM","Dinner","Paneer / soya bhurji + 1–2 roti + sabzi"],["10:00 PM","Sleep","7–8 hours of sleep"]],
+  office:[["7:00 AM","Wake up","Warm water + lemon"],["7:30 AM","Breakfast","Poha / upma with peanuts + 1 glass milk"],["11:00 AM","At office","Fruit + handful of roasted chana"],["1:30 PM","Lunch (tiffin)","2 roti + dal + sabzi + salad"],["5:00 PM","Pre-workout","Banana or sprouts chaat"],["7:00 PM","Workout","Training session at gym or home"],["8:30 PM","Dinner","Dal / paneer + 1–2 roti or small rice + sabzi"],["11:00 PM","Sleep","7–8 hours of sleep"]],
+  night:[["2:00 PM","Wake up","Warm water + soaked almonds"],["3:00 PM","Meal 1","2 roti + dal + sabzi + curd"],["5:30 PM","Workout","Training session"],["7:00 PM","Meal 2","Sprouts / paneer + fruit"],["10:00 PM","At work","Light dinner: khichdi or roti + dal + sabzi"],["2:00 AM","Shift snack","Roasted chana / makhana — avoid fried snacks &amp; extra tea"],["6:00 AM","Before sleep","Glass of warm milk or curd"],["7:00 AM","Sleep","Dark room, 7–8 hours"]]
+};
+const planEl=document.getElementById("plan");
+function showPlan(k){
+  planEl.innerHTML=PLANS[k].map(([t,l,f])=>`<div class="meal"><div class="time">${t}<small>${l}</small></div><div class="food">${f}</div></div>`).join("");
+  document.querySelectorAll(".plan-tabs button").forEach(b=>b.classList.toggle("on",b.dataset.plan===k));
+}
+document.querySelectorAll(".plan-tabs button").forEach(b=>b.addEventListener("click",()=>showPlan(b.dataset.plan)));
+showPlan("early");
+
+document.getElementById("bmi").addEventListener("submit",e=>{
+  e.preventDefault();
+  const h=+document.getElementById("h").value/100, w=+document.getElementById("w").value;
+  if(!h||!w) return;
+  const bmi=w/(h*h);
+  let cat,col,tip;
+  if(bmi<18.5){cat="Underweight";col="#5fa8ff";tip="A weight-gain plan with strength training can help you build healthy mass."}
+  else if(bmi<23){cat="Normal";col="#2f8f5b";tip="Great base. Training can now focus on strength, shape and fitness."}
+  else if(bmi<25){cat="Overweight";col="#e0a400";tip="A small calorie deficit with strength training can bring this down steadily."}
+  else {cat="Obese";col="#e0482b";tip="A structured fat-loss plan will help. Let's start gently and safely."}
+  const pos=Math.min(100,Math.max(0,(bmi-15)/(35-15)*100));
+  const out=document.getElementById("bmiOut");
+  const msg=`Hi! My BMI is ${bmi.toFixed(1)} (${cat}). I'd like a training & diet plan.`;
+  out.innerHTML=`<div class="big">${bmi.toFixed(1)}</div><p style="color:${col};font-weight:700;margin-top:4px">${cat} <span style="color:#9c958b;font-weight:400">(Asian-Indian cut-offs)</span></p>
+    <div class="scale" style="position:relative"><span style="background:#5fa8ff;flex:3.5"></span><span style="background:#2f8f5b;flex:4.5"></span><span style="background:#e0a400;flex:2"></span><span style="background:#e0482b;flex:10"></span>
+    <i style="position:absolute;left:${pos}%;top:-5px;width:4px;height:20px;background:#fff;border-radius:2px;transform:translateX(-2px)"></i></div>
+    <div class="scale-labels" style="justify-content:flex-start"><span style="flex:3.5">&lt;18.5</span><span style="flex:4.5">18.5–22.9</span><span style="flex:2">23–24.9</span><span style="flex:10">25+</span></div>
+    <p style="color:#e8dfd2;margin:14px 0 16px">${tip}</p>
+    <a class="btn btn-wa" id="bmiWa">Discuss on WhatsApp</a>`;
+  out.classList.add("show");
+  const a=document.getElementById("bmiWa"); a.href=waLink(msg); a.target="_blank"; a.rel="noopener"; a.insertAdjacentHTML("afterbegin",WA_ICON);
+});
+</script>
+</body>
+</html>

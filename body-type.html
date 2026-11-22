@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Body Type Quiz — Jamui Fit</title>
+<meta name="description" content="Find out if you are ectomorph, mesomorph or endomorph and how training and diet change for your body type.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Body type training</span>
+    <h1>What's your body type?</h1>
+    <p>Answer 6 quick questions. You'll see which type you lean towards and how I'd approach your training and diet.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split" style="align-items:start">
+    <div class="quiz reveal" id="quiz">
+      <div class="quiz-progress"><div id="bar"></div></div>
+      <div id="qbox"></div>
+      <div class="quiz-result" id="result"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow dark">Good to know</span>
+      <h2 style="font-size:clamp(32px,4vw,46px);text-transform:uppercase;margin:12px 0 14px">Most people are a mix</h2>
+      <p style="color:#5f5951;margin-bottom:14px">Body types (somatotypes) were described in the 1940s. Experts today agree they rarely exist in pure form — most people are a blend of two, and your type can shift with training and diet.</p>
+      <p style="color:#5f5951;margin-bottom:14px">So I use your body type as a <b>starting point</b>, not a rule. Real adjustments come from tracking how your weight, strength and measurements change week to week.</p>
+      <p class="hi">यह क्विज़ एक शुरुआत है — असली प्लान आपकी जाँच के बाद बनता है।</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow dark">The three types</span>
+      <h2>How I train each one</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card reveal">
+        <span class="tag">Ectomorph</span>
+        <h3>Lean &amp; light</h3>
+        <p>Slim frame, narrow shoulders and hips, finds it hard to gain weight or muscle.</p>
+        <ul>
+          <li><b>Training:</b> heavy compound lifts, moderate reps, longer rest</li>
+          <li><b>Cardio:</b> light — save energy for growth</li>
+          <li><b>Diet:</b> calorie surplus, high protein, more carbs, frequent meals</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Mesomorph</span>
+        <h3>Athletic</h3>
+        <p>Medium frame, broader shoulders, builds muscle easily — but can gain fat if careless.</p>
+        <ul>
+          <li><b>Training:</b> mixed strength and hypertrophy, varied programs</li>
+          <li><b>Cardio:</b> moderate, 2–3 days a week</li>
+          <li><b>Diet:</b> balanced protein, carbs and fats matched to goal</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Endomorph</span>
+        <h3>Solid &amp; strong</h3>
+        <p>Wider build, gains fat easily and loses it slowly — but builds strength well.</p>
+        <ul>
+          <li><b>Training:</b> full-body strength + circuits to burn more</li>
+          <li><b>Cardio:</b> HIIT and daily steps are key</li>
+          <li><b>Diet:</b> high protein, controlled carbs, slight calorie deficit</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">General guidance only. Your actual plan depends on your assessment, health history and goals.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div><h2>Get a plan for your body type</h2><p class="hi">अपने बॉडी टाइप के हिसाब से प्लान पाएँ।</p></div>
+    <a class="btn btn-primary" href="contact.html">Book Free Consultation →</a>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+<script>
+const Q = [
+  {q:"How would you describe your natural frame?", hi:"आपकी बनावट कैसी है?", o:[
+    ["Thin, long arms and legs, narrow shoulders","e"],["Medium, broad shoulders, naturally muscular","m"],["Wider, rounder build, bigger hips/waist","n"]]},
+  {q:"Wrap your thumb and middle finger around your wrist.", hi:"अंगूठे और बीच की उंगली से कलाई पकड़ें।", o:[
+    ["Fingers overlap easily","e"],["Fingers just touch","m"],["Fingers don't meet","n"]]},
+  {q:"When you eat more than usual for a few weeks…", hi:"कुछ हफ़्ते ज़्यादा खाने पर…", o:[
+    ["I hardly gain any weight","e"],["I gain some, mostly muscle if I train","m"],["I gain weight quickly, mostly around the belly","n"]]},
+  {q:"When you cut down food or exercise more…", hi:"खाना कम करने या ज़्यादा कसरत करने पर…", o:[
+    ["I lose weight too fast, even muscle","e"],["I lose fat fairly easily","m"],["Weight comes off very slowly","n"]]},
+  {q:"How easily do you build muscle?", hi:"मसल कितनी आसानी से बनती है?", o:[
+    ["Very hard, even with training","e"],["Quite easily","m"],["Strength comes easily, but it's hidden under fat","n"]]},
+  {q:"How is your energy and appetite through the day?", hi:"दिनभर ऊर्जा और भूख कैसी रहती है?", o:[
+    ["Restless energy, small appetite or forget to eat","e"],["Steady energy, normal appetite","m"],["Feel sluggish sometimes, strong appetite","n"]]}
+];
+const NAMES = {e:"Ectomorph",m:"Mesomorph",n:"Endomorph"};
+const COLORS = {e:"#2f8f5b",m:"#ff6b1a",n:"#7a4fd6"};
+const ADVICE = {
+  e:["Your body burns energy fast. The focus is building size and strength.","Heavy compound lifts (squat, deadlift, push-ups/bench, rows), 3–4 days a week","Keep cardio light","Eat more often: 5–6 meals with protein in each — dal, paneer, eggs, sattu, milk, banana"],
+  m:["You respond well to training. The focus is staying consistent and not over-eating.","Mix of heavy lifting and higher-rep muscle work, 4–5 days a week","Moderate cardio 2–3 days","Balanced plate: roti/rice + dal/protein + sabzi, portions matched to your goal"],
+  n:["You build strength well but store fat easily. The focus is fat loss while keeping muscle.","Full-body strength + circuits, 4–5 days a week","HIIT 2–3 days and 8,000–10,000 daily steps","High protein, fewer refined carbs and sweets, controlled portions of rice/roti"]
+};
+let i=0, score={e:0,m:0,n:0};
+const qbox=document.getElementById("qbox"), bar=document.getElementById("bar"), res=document.getElementById("result");
+function render(){
+  bar.style.width = (i/Q.length*100)+"%";
+  const it=Q[i];
+  qbox.innerHTML = `<p class="tag" style="margin-bottom:14px">Question ${i+1} of ${Q.length}</p>
+    <h3>${it.q}</h3><p class="q-hi hi">${it.hi}</p>
+    <div class="opts">${it.o.map(([t,k])=>`<button class="opt" data-k="${k}">${t}</button>`).join("")}</div>`;
+  qbox.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{score[b.dataset.k]++; i++; i<Q.length?render():finish();}));
+}
+function finish(){
+  bar.style.width="100%"; qbox.innerHTML="";
+  const sorted=Object.entries(score).sort((a,b)=>b[1]-a[1]);
+  const [top,second]=sorted;
+  const label = second[1]>=2 && second[1]>=top[1]-1 ? `${NAMES[top[0]]}–${NAMES[second[0]].slice(0,4)}` : NAMES[top[0]];
+  const a=ADVICE[top[0]];
+  const pct=k=>Math.round(score[k]/Q.length*100);
+  const msg=`Namaste! I took the body type quiz on your website. Result: ${label} (Ecto ${pct("e")}%, Meso ${pct("m")}%, Endo ${pct("n")}%). I'd like a plan.`;
+  res.innerHTML = `<p class="tag">Your result</p>
+    <div class="result-type" style="margin:12px 0 6px">${label}</div>
+    <div class="mix-bar">${["e","m","n"].map(k=>`<span style="width:${pct(k)}%;background:${COLORS[k]}"></span>`).join("")}</div>
+    <div class="mix-legend">${["e","m","n"].map(k=>`<span><i style="background:${COLORS[k]}"></i>${NAMES[k]} ${pct(k)}%</span>`).join("")}</div>
+    <p style="margin:20px 0 10px;color:#3b3631">${a[0]}</p>
+    <div class="card" style="padding:20px;background:var(--paper)"><ul style="margin:0">${a.slice(1).map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    <div class="hero-actions" style="margin-top:22px">
+      <a class="btn btn-wa" id="sendRes">Send result on WhatsApp</a>
+      <button class="btn btn-ghost" id="again">Retake</button>
+    </div>`;
+  res.classList.add("show");
+  const s=document.getElementById("sendRes"); s.href=waLink(msg); s.target="_blank"; s.rel="noopener"; s.insertAdjacentHTML("afterbegin",WA_ICON);
+  document.getElementById("again").onclick=()=>{i=0;score={e:0,m:0,n:0};res.classList.remove("show");render();};
+}
+render();
+</script>
+</body>
+</html>
