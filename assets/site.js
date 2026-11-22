@@ -3,7 +3,7 @@
    ============================================================ */
 const SITE = {
   brand: "JAMUI FIT",            // short brand name shown in the logo
-  trainerName: "Your Name",       // e.g. "Rahul Kumar"
+  trainerName: "Raaz",
   phone: "918862821060",          // WhatsApp number WITH country code, digits only
   phoneDisplay: "+91 88628 21060",
   email: "kraazft@gmail.com",
@@ -16,6 +16,7 @@ const SITE = {
 };
 /* Hindi versions of the details above (used when the site is switched to हिंदी) */
 const SITE_HI = {
+  trainerName: "राज़",
   address: "जमुई, बिहार – 811307",
   hours: "सोम–शनि · सुबह 5:30 – रात 9:00",
   languages: "हिंदी और अंग्रेज़ी",

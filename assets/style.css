@@ -249,3 +249,20 @@ html[lang=hi] .hero h1{font-size:clamp(40px,6vw,76px)}
 html[lang=hi] .eyebrow,html[lang=hi] .tag{letter-spacing:.5px}
 html[lang=hi] .brand-text small{letter-spacing:.3px}
 .brand-logo{width:40px;height:40px;flex:none}
+.portrait.has-photo{padding:0;display:block}
+.portrait.has-photo img{width:100%;height:100%;object-fit:cover;object-position:68% 40%}
+.portrait.has-photo::before{display:none}
+
+/* client transformation card */
+.result-card{padding:16px 16px 24px}
+.ba{position:relative;margin:0 0 16px;border-radius:14px;overflow:hidden;background:var(--paper-2);aspect-ratio:1/1}
+.ba img{width:100%;height:100%;object-fit:cover;display:block}
+.ba figcaption{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:space-around;pointer-events:none}
+.ba figcaption span{background:rgba(18,17,16,.82);color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.ba-stat{font-family:var(--display);font-size:30px;color:var(--ink);margin:2px 0 6px;line-height:1.1}
+.ba-stat b{color:var(--saffron);font-weight:400}
+html[lang=hi] .ba-stat{font-family:var(--hi);font-weight:700;font-size:26px}
+@media(min-width:901px){.next-card{grid-column:span 2;display:flex;flex-direction:column;justify-content:center;padding:40px}}
+@media(max-width:900px) and (min-width:621px){.next-card{grid-column:span 1}}
+html[lang=hi] .ba figcaption span{letter-spacing:0}
+.next-card .tag{align-self:flex-start}
