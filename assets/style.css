@@ -232,3 +232,20 @@ section{padding:90px 0}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}*{transition:none!important}}
+
+/* language toggle */
+.nav-tools{display:flex;align-items:center;gap:8px}
+.lang-toggle{display:flex;background:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang-toggle button{background:none;border:0;color:#d9d3ca;font:700 13px/1 var(--body);padding:8px 12px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang-toggle button[lang=hi]{font-family:var(--hi)}
+.lang-toggle button[aria-pressed=true]{background:var(--saffron);color:var(--ink)}
+.lang-toggle button:focus-visible{outline:2px solid var(--saffron-2);outline-offset:2px}
+@media(min-width:901px){.nav-links{margin-left:auto;margin-right:12px}}
+
+/* Hindi mode: Anton has no Devanagari, so use Noto Sans Devanagari for headings */
+html[lang=hi] body{font-family:var(--hi)}
+html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3,html[lang=hi] .stat b,html[lang=hi] .result-type{font-family:var(--hi);font-weight:700;letter-spacing:0;line-height:1.3}
+html[lang=hi] .hero h1{font-size:clamp(40px,6vw,76px)}
+html[lang=hi] .eyebrow,html[lang=hi] .tag{letter-spacing:.5px}
+html[lang=hi] .brand-text small{letter-spacing:.3px}
+.brand-logo{width:40px;height:40px;flex:none}

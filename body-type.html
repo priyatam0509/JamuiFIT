@@ -3,8 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Body Type Quiz — Jamui Fit</title>
-<meta name="description" content="Find out if you are ectomorph, mesomorph or endomorph and how training and diet change for your body type.">
+<!-- SITE URL: https://priyatam0509.github.io/JamuiFIT/  (replace everywhere when moving to a custom domain) -->
+<title data-hi="बॉडी टाइप क्विज़ — जमुई फिट">Body Type Quiz – Ectomorph, Mesomorph, Endomorph | Jamui Fit, Jamui</title>
+<meta name="description" content="Free body type quiz by Jamui Fit, Jamui. Find out if you are ectomorph, mesomorph or endomorph and how your training and diet should change.">
+<link rel="canonical" href="https://priyatam0509.github.io/JamuiFIT/body-type.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jamui Fit">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="What's Your Body Type? Free Quiz | Jamui Fit">
+<meta property="og:description" content="Ectomorph, mesomorph or endomorph? Take the quiz and see how to train and eat for your body.">
+<meta property="og:url" content="https://priyatam0509.github.io/JamuiFIT/body-type.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What's Your Body Type? Free Quiz | Jamui Fit">
+<meta name="twitter:description" content="Ectomorph, mesomorph or endomorph? Take the quiz and see how to train and eat for your body.">
+<meta name="theme-color" content="#121110">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/logo-512.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -13,9 +28,9 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">Body type training</span>
-    <h1>What's your body type?</h1>
-    <p>Answer 6 quick questions. You'll see which type you lean towards and how I'd approach your training and diet.</p>
+    <span class="eyebrow" data-hi="बॉडी टाइप ट्रेनिंग">Body type training</span>
+    <h1 data-hi="आपका बॉडी टाइप क्या है?">What's your body type?</h1>
+    <p data-hi="6 छोटे सवालों के जवाब दें। आप देखेंगे कि आप किस टाइप की ओर हैं और मैं आपकी ट्रेनिंग और डाइट कैसे प्लान करूँगा।">Answer 6 quick questions. You'll see which type you lean towards and how I'd approach your training and diet.</p>
   </div>
 </section>
 
@@ -27,10 +42,10 @@
       <div class="quiz-result" id="result"></div>
     </div>
     <div class="reveal">
-      <span class="eyebrow dark">Good to know</span>
-      <h2 style="font-size:clamp(32px,4vw,46px);text-transform:uppercase;margin:12px 0 14px">Most people are a mix</h2>
-      <p style="color:#5f5951;margin-bottom:14px">Body types (somatotypes) were described in the 1940s. Experts today agree they rarely exist in pure form — most people are a blend of two, and your type can shift with training and diet.</p>
-      <p style="color:#5f5951;margin-bottom:14px">So I use your body type as a <b>starting point</b>, not a rule. Real adjustments come from tracking how your weight, strength and measurements change week to week.</p>
+      <span class="eyebrow dark" data-hi="जानने लायक">Good to know</span>
+      <h2 style="font-size:clamp(32px,4vw,46px);text-transform:uppercase;margin:12px 0 14px" data-hi="ज़्यादातर लोग मिश्रण होते हैं">Most people are a mix</h2>
+      <p style="color:#5f5951;margin-bottom:14px" data-hi="बॉडी टाइप (सोमैटोटाइप) 1940 के दशक में बताए गए थे। आज के विशेषज्ञ मानते हैं कि ये शुद्ध रूप में कम ही मिलते हैं — ज़्यादातर लोग दो टाइप का मिश्रण होते हैं, और ट्रेनिंग व डाइट से आपका टाइप बदल भी सकता है।">Body types (somatotypes) were described in the 1940s. Experts today agree they rarely exist in pure form — most people are a blend of two, and your type can shift with training and diet.</p>
+      <p style="color:#5f5951;margin-bottom:14px" data-hi="इसलिए मैं बॉडी टाइप को <b>शुरुआती बिंदु</b> मानता हूँ, नियम नहीं। असली बदलाव इस पर होते हैं कि हर हफ़्ते आपका वज़न, ताक़त और नाप कैसे बदलते हैं।">So I use your body type as a <b>starting point</b>, not a rule. Real adjustments come from tracking how your weight, strength and measurements change week to week.</p>
       <p class="hi">यह क्विज़ एक शुरुआत है — असली प्लान आपकी जाँच के बाद बनता है।</p>
     </div>
   </div>
@@ -39,108 +54,132 @@
 <section class="alt">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow dark">The three types</span>
-      <h2>How I train each one</h2>
+      <span class="eyebrow dark" data-hi="तीन टाइप">The three types</span>
+      <h2 data-hi="मैं हर टाइप को कैसे ट्रेन करता हूँ">How I train each one</h2>
     </div>
     <div class="grid-3">
       <article class="card reveal">
-        <span class="tag">Ectomorph</span>
-        <h3>Lean &amp; light</h3>
-        <p>Slim frame, narrow shoulders and hips, finds it hard to gain weight or muscle.</p>
-        <ul>
+        <span class="tag" data-hi="एक्टोमॉर्फ">Ectomorph</span>
+        <h3 data-hi="दुबला-पतला">Lean &amp; light</h3>
+        <p data-hi="पतला ढाँचा, संकरे कंधे और कूल्हे, वज़न या मसल बढ़ाना मुश्किल।">Slim frame, narrow shoulders and hips, finds it hard to gain weight or muscle.</p>
+        <ul data-hi="<li><b>ट्रेनिंग:</b> भारी कंपाउंड लिफ़्ट, मध्यम रेप्स, ज़्यादा आराम</li><li><b>कार्डियो:</b> हल्का — ऊर्जा ग्रोथ के लिए बचाएँ</li><li><b>डाइट:</b> ज़्यादा कैलोरी, हाई प्रोटीन, ज़्यादा कार्ब्स, बार-बार खाना</li>">
           <li><b>Training:</b> heavy compound lifts, moderate reps, longer rest</li>
           <li><b>Cardio:</b> light — save energy for growth</li>
           <li><b>Diet:</b> calorie surplus, high protein, more carbs, frequent meals</li>
         </ul>
       </article>
       <article class="card reveal">
-        <span class="tag">Mesomorph</span>
-        <h3>Athletic</h3>
-        <p>Medium frame, broader shoulders, builds muscle easily — but can gain fat if careless.</p>
-        <ul>
+        <span class="tag" data-hi="मेसोमॉर्फ">Mesomorph</span>
+        <h3 data-hi="एथलेटिक">Athletic</h3>
+        <p data-hi="मध्यम ढाँचा, चौड़े कंधे, मसल आसानी से बनती है — पर लापरवाही से फैट भी बढ़ सकता है।">Medium frame, broader shoulders, builds muscle easily — but can gain fat if careless.</p>
+        <ul data-hi="<li><b>ट्रेनिंग:</b> स्ट्रेंथ और हाइपरट्रॉफ़ी का मिश्रण, बदलते प्रोग्राम</li><li><b>कार्डियो:</b> मध्यम, हफ़्ते में 2–3 दिन</li><li><b>डाइट:</b> लक्ष्य के हिसाब से संतुलित प्रोटीन, कार्ब्स और फ़ैट</li>">
           <li><b>Training:</b> mixed strength and hypertrophy, varied programs</li>
           <li><b>Cardio:</b> moderate, 2–3 days a week</li>
           <li><b>Diet:</b> balanced protein, carbs and fats matched to goal</li>
         </ul>
       </article>
       <article class="card reveal">
-        <span class="tag">Endomorph</span>
-        <h3>Solid &amp; strong</h3>
-        <p>Wider build, gains fat easily and loses it slowly — but builds strength well.</p>
-        <ul>
+        <span class="tag" data-hi="एंडोमॉर्फ">Endomorph</span>
+        <h3 data-hi="भारी और मज़बूत">Solid &amp; strong</h3>
+        <p data-hi="चौड़ा शरीर, फैट जल्दी बढ़ता और धीरे घटता है — पर ताक़त अच्छी बनती है।">Wider build, gains fat easily and loses it slowly — but builds strength well.</p>
+        <ul data-hi="<li><b>ट्रेनिंग:</b> फ़ुल-बॉडी स्ट्रेंथ + सर्किट, ज़्यादा कैलोरी बर्न के लिए</li><li><b>कार्डियो:</b> HIIT और रोज़ के कदम सबसे ज़रूरी</li><li><b>डाइट:</b> हाई प्रोटीन, कंट्रोल्ड कार्ब्स, थोड़ी कैलोरी कमी</li>">
           <li><b>Training:</b> full-body strength + circuits to burn more</li>
           <li><b>Cardio:</b> HIIT and daily steps are key</li>
           <li><b>Diet:</b> high protein, controlled carbs, slight calorie deficit</li>
         </ul>
       </article>
     </div>
-    <p class="note">General guidance only. Your actual plan depends on your assessment, health history and goals.</p>
+    <p class="note" data-hi="यह सिर्फ़ सामान्य जानकारी है। आपका असली प्लान आपकी जाँच, स्वास्थ्य इतिहास और लक्ष्य पर निर्भर करता है।">General guidance only. Your actual plan depends on your assessment, health history and goals.</p>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="wrap">
-    <div><h2>Get a plan for your body type</h2><p class="hi">अपने बॉडी टाइप के हिसाब से प्लान पाएँ।</p></div>
-    <a class="btn btn-primary" href="contact.html">Book Free Consultation →</a>
+    <div><h2 data-hi="अपने बॉडी टाइप का प्लान पाएँ">Get a plan for your body type</h2><p class="hi">अपने बॉडी टाइप के हिसाब से प्लान पाएँ।</p></div>
+    <a class="btn btn-primary" href="contact.html" data-hi="फ्री कंसल्टेशन बुक करें →">Book Free Consultation →</a>
   </div>
 </section>
 
 <script src="assets/site.js"></script>
 <script>
+// Each question: English text, Hindi text, options as [English, Hindi, type]
 const Q = [
   {q:"How would you describe your natural frame?", hi:"आपकी बनावट कैसी है?", o:[
-    ["Thin, long arms and legs, narrow shoulders","e"],["Medium, broad shoulders, naturally muscular","m"],["Wider, rounder build, bigger hips/waist","n"]]},
+    ["Thin, long arms and legs, narrow shoulders","पतला, लंबे हाथ-पैर, संकरे कंधे","e"],
+    ["Medium, broad shoulders, naturally muscular","मध्यम, चौड़े कंधे, स्वाभाविक रूप से मस्कुलर","m"],
+    ["Wider, rounder build, bigger hips/waist","चौड़ा, गोल शरीर, बड़े कूल्हे/कमर","n"]]},
   {q:"Wrap your thumb and middle finger around your wrist.", hi:"अंगूठे और बीच की उंगली से कलाई पकड़ें।", o:[
-    ["Fingers overlap easily","e"],["Fingers just touch","m"],["Fingers don't meet","n"]]},
+    ["Fingers overlap easily","उंगलियाँ आसानी से एक-दूसरे पर चढ़ जाती हैं","e"],
+    ["Fingers just touch","उंगलियाँ बस छूती हैं","m"],
+    ["Fingers don't meet","उंगलियाँ नहीं मिलतीं","n"]]},
   {q:"When you eat more than usual for a few weeks…", hi:"कुछ हफ़्ते ज़्यादा खाने पर…", o:[
-    ["I hardly gain any weight","e"],["I gain some, mostly muscle if I train","m"],["I gain weight quickly, mostly around the belly","n"]]},
+    ["I hardly gain any weight","वज़न लगभग नहीं बढ़ता","e"],
+    ["I gain some, mostly muscle if I train","थोड़ा बढ़ता है, ट्रेनिंग करूँ तो ज़्यादातर मसल","m"],
+    ["I gain weight quickly, mostly around the belly","वज़न जल्दी बढ़ता है, ज़्यादातर पेट पर","n"]]},
   {q:"When you cut down food or exercise more…", hi:"खाना कम करने या ज़्यादा कसरत करने पर…", o:[
-    ["I lose weight too fast, even muscle","e"],["I lose fat fairly easily","m"],["Weight comes off very slowly","n"]]},
+    ["I lose weight too fast, even muscle","वज़न बहुत जल्दी घटता है, मसल भी","e"],
+    ["I lose fat fairly easily","फैट काफ़ी आसानी से घटता है","m"],
+    ["Weight comes off very slowly","वज़न बहुत धीरे घटता है","n"]]},
   {q:"How easily do you build muscle?", hi:"मसल कितनी आसानी से बनती है?", o:[
-    ["Very hard, even with training","e"],["Quite easily","m"],["Strength comes easily, but it's hidden under fat","n"]]},
+    ["Very hard, even with training","ट्रेनिंग के बाद भी बहुत मुश्किल से","e"],
+    ["Quite easily","काफ़ी आसानी से","m"],
+    ["Strength comes easily, but it's hidden under fat","ताक़त आसानी से आती है, पर फैट के नीचे छिपी रहती है","n"]]},
   {q:"How is your energy and appetite through the day?", hi:"दिनभर ऊर्जा और भूख कैसी रहती है?", o:[
-    ["Restless energy, small appetite or forget to eat","e"],["Steady energy, normal appetite","m"],["Feel sluggish sometimes, strong appetite","n"]]}
+    ["Restless energy, small appetite or forget to eat","बेचैन ऊर्जा, कम भूख या खाना भूल जाता हूँ","e"],
+    ["Steady energy, normal appetite","स्थिर ऊर्जा, सामान्य भूख","m"],
+    ["Feel sluggish sometimes, strong appetite","कभी-कभी सुस्ती, भूख ज़्यादा","n"]]}
 ];
 const NAMES = {e:"Ectomorph",m:"Mesomorph",n:"Endomorph"};
+const NAMES_HI = {e:"एक्टोमॉर्फ",m:"मेसोमॉर्फ",n:"एंडोमॉर्फ"};
 const COLORS = {e:"#2f8f5b",m:"#ff6b1a",n:"#7a4fd6"};
 const ADVICE = {
   e:["Your body burns energy fast. The focus is building size and strength.","Heavy compound lifts (squat, deadlift, push-ups/bench, rows), 3–4 days a week","Keep cardio light","Eat more often: 5–6 meals with protein in each — dal, paneer, eggs, sattu, milk, banana"],
   m:["You respond well to training. The focus is staying consistent and not over-eating.","Mix of heavy lifting and higher-rep muscle work, 4–5 days a week","Moderate cardio 2–3 days","Balanced plate: roti/rice + dal/protein + sabzi, portions matched to your goal"],
   n:["You build strength well but store fat easily. The focus is fat loss while keeping muscle.","Full-body strength + circuits, 4–5 days a week","HIIT 2–3 days and 8,000–10,000 daily steps","High protein, fewer refined carbs and sweets, controlled portions of rice/roti"]
 };
-let i=0, score={e:0,m:0,n:0};
+const ADVICE_HI = {
+  e:["आपका शरीर ऊर्जा जल्दी जलाता है। ध्यान साइज़ और ताक़त बढ़ाने पर है।","भारी कंपाउंड लिफ़्ट (स्क्वाट, डेडलिफ़्ट, पुश-अप/बेंच, रो), हफ़्ते में 3–4 दिन","कार्डियो हल्का रखें","बार-बार खाएँ: 5–6 बार, हर बार प्रोटीन — दाल, पनीर, अंडे, सत्तू, दूध, केला"],
+  m:["आपका शरीर ट्रेनिंग पर अच्छा रिस्पॉन्स देता है। ध्यान लगातार बने रहने और ज़्यादा न खाने पर है।","भारी लिफ़्टिंग और ज़्यादा रेप्स वाला मसल वर्क, हफ़्ते में 4–5 दिन","मध्यम कार्डियो, 2–3 दिन","संतुलित थाली: रोटी/चावल + दाल/प्रोटीन + सब्ज़ी, मात्रा लक्ष्य के हिसाब से"],
+  n:["आपकी ताक़त अच्छी बनती है पर फैट जल्दी जमता है। ध्यान मसल बचाते हुए फैट घटाने पर है।","फ़ुल-बॉडी स्ट्रेंथ + सर्किट, हफ़्ते में 4–5 दिन","HIIT 2–3 दिन और रोज़ 8,000–10,000 कदम","हाई प्रोटीन, मैदा और मीठा कम, चावल/रोटी की मात्रा कंट्रोल में"]
+};
+let i=0, score={e:0,m:0,n:0}, finished=false;
 const qbox=document.getElementById("qbox"), bar=document.getElementById("bar"), res=document.getElementById("result");
 function render(){
   bar.style.width = (i/Q.length*100)+"%";
   const it=Q[i];
-  qbox.innerHTML = `<p class="tag" style="margin-bottom:14px">Question ${i+1} of ${Q.length}</p>
-    <h3>${it.q}</h3><p class="q-hi hi">${it.hi}</p>
-    <div class="opts">${it.o.map(([t,k])=>`<button class="opt" data-k="${k}">${t}</button>`).join("")}</div>`;
+  qbox.innerHTML = `<p class="tag" style="margin-bottom:14px">${t(`Question ${i+1} of ${Q.length}`,`सवाल ${i+1} / ${Q.length}`)}</p>
+    <h3>${t(it.q,it.hi)}</h3>${LANG==="hi"?"":`<p class="q-hi hi">${it.hi}</p>`}
+    <div class="opts">${it.o.map(([en,hi,k])=>`<button class="opt" data-k="${k}">${t(en,hi)}</button>`).join("")}</div>`;
   qbox.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{score[b.dataset.k]++; i++; i<Q.length?render():finish();}));
 }
 function finish(){
+  finished=true;
   bar.style.width="100%"; qbox.innerHTML="";
   const sorted=Object.entries(score).sort((a,b)=>b[1]-a[1]);
   const [top,second]=sorted;
-  const label = second[1]>=2 && second[1]>=top[1]-1 ? `${NAMES[top[0]]}–${NAMES[second[0]].slice(0,4)}` : NAMES[top[0]];
-  const a=ADVICE[top[0]];
+  const mixed = second[1]>=2 && second[1]>=top[1]-1;
+  const label = mixed ? `${NAMES[top[0]]}–${NAMES[second[0]].slice(0,4)}` : NAMES[top[0]];
+  const labelShown = LANG==="hi" ? (mixed ? `${NAMES_HI[top[0]]}–${NAMES_HI[second[0]]}` : NAMES_HI[top[0]]) : label;
+  const a=(LANG==="hi"?ADVICE_HI:ADVICE)[top[0]];
+  const nm=k=>t(NAMES[k],NAMES_HI[k]);
   const pct=k=>Math.round(score[k]/Q.length*100);
   const msg=`Namaste! I took the body type quiz on your website. Result: ${label} (Ecto ${pct("e")}%, Meso ${pct("m")}%, Endo ${pct("n")}%). I'd like a plan.`;
-  res.innerHTML = `<p class="tag">Your result</p>
-    <div class="result-type" style="margin:12px 0 6px">${label}</div>
+  res.innerHTML = `<p class="tag">${t("Your result","आपका रिज़ल्ट")}</p>
+    <div class="result-type" style="margin:12px 0 6px">${labelShown}</div>
     <div class="mix-bar">${["e","m","n"].map(k=>`<span style="width:${pct(k)}%;background:${COLORS[k]}"></span>`).join("")}</div>
-    <div class="mix-legend">${["e","m","n"].map(k=>`<span><i style="background:${COLORS[k]}"></i>${NAMES[k]} ${pct(k)}%</span>`).join("")}</div>
+    <div class="mix-legend">${["e","m","n"].map(k=>`<span><i style="background:${COLORS[k]}"></i>${nm(k)} ${pct(k)}%</span>`).join("")}</div>
     <p style="margin:20px 0 10px;color:#3b3631">${a[0]}</p>
     <div class="card" style="padding:20px;background:var(--paper)"><ul style="margin:0">${a.slice(1).map(x=>`<li>${x}</li>`).join("")}</ul></div>
     <div class="hero-actions" style="margin-top:22px">
-      <a class="btn btn-wa" id="sendRes">Send result on WhatsApp</a>
-      <button class="btn btn-ghost" id="again">Retake</button>
+      <a class="btn btn-wa" id="sendRes">${t("Send result on WhatsApp","रिज़ल्ट WhatsApp पर भेजें")}</a>
+      <button class="btn btn-ghost" id="again">${t("Retake","फिर से दें")}</button>
     </div>`;
   res.classList.add("show");
   const s=document.getElementById("sendRes"); s.href=waLink(msg); s.target="_blank"; s.rel="noopener"; s.insertAdjacentHTML("afterbegin",WA_ICON);
-  document.getElementById("again").onclick=()=>{i=0;score={e:0,m:0,n:0};res.classList.remove("show");render();};
+  document.getElementById("again").onclick=()=>{i=0;score={e:0,m:0,n:0};finished=false;res.classList.remove("show");render();};
 }
 render();
+document.addEventListener("langchange",()=>{ finished ? finish() : render(); });
 </script>
 </body>
 </html>

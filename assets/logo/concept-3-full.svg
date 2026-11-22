@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 64" width="290" height="64" role="img" aria-label="Jamui Fit">
+<!-- Wordmark uses font-family Anton (Google Fonts); falls back to Impact. Outline text to paths for print/signage. -->
+<circle cx="32" cy="32" r="31" fill="#ff6b1a"/><rect x="9" y="15" width="46" height="7" rx="1.5" fill="#121110"/><g fill="none" stroke="#121110" stroke-width="7" stroke-linecap="round"><path d="M27 20V38A7.5 7.5 0 0 1 12 38"/><path d="M41 20V48"/><path d="M41 34H51"/></g>
+<text x="80" y="48" font-family="Anton, Impact, sans-serif" font-size="44" letter-spacing="1.5" fill="#f6f1e9">JAMUI <tspan fill="#ff6b1a">FIT</tspan></text>
+</svg>

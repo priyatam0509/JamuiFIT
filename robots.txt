@@ -1,0 +1,8 @@
+# robots.txt for Jamui Fit
+# SITE URL: https://priyatam0509.github.io/JamuiFIT/  (change the Sitemap line below when you move to a custom domain, e.g. https://jamuifit.in/)
+# Note: search engines only read robots.txt at the ROOT of a domain, so this file
+# takes full effect once the site is on its own domain (jamuifit.in).
+User-agent: *
+Allow: /
+
+Sitemap: https://priyatam0509.github.io/JamuiFIT/sitemap.xml
