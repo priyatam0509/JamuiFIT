@@ -266,3 +266,4 @@ html[lang=hi] .ba-stat{font-family:var(--hi);font-weight:700;font-size:26px}
 @media(max-width:900px) and (min-width:621px){.next-card{grid-column:span 1}}
 html[lang=hi] .ba figcaption span{letter-spacing:0}
 .next-card .tag{align-self:flex-start}
+.grid-4 > .step::before{content:none}
